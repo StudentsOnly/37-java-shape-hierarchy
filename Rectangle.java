@@ -7,10 +7,16 @@ class Rectangle extends Shape {
     }
 
     public double getWidth() {
+        if (width < 0) {
+            throw new IllegalArgumentException("Width cannot be negative.");
+        }
         return width;
     }
 
     public void setHeight(double height) {
+        if (height < 0) {
+            throw new IllegalArgumentException("Height cannot be negative.");
+        }
         this.height = height;
     }
 
